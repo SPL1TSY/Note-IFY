@@ -1,0 +1,22 @@
+{
+  "name": "note-ify",
+  "version": "1.0.0",
+  "description": "This is a Notes App for taking notes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SPL1TSY/Note-IFY.git"
+  },
+  "author": "Harun Hurtic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SPL1TSY/Note-IFY/issues"
+  },
+  "homepage": "https://github.com/SPL1TSY/Note-IFY#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
