@@ -1,0 +1,18 @@
+{
+    "no": {
+      "id": 1,
+      "title": "Note-IFY",
+      "placeHold": "Skriv et notat..",
+      "addNote": "Legg til notat",
+      "removeNote": "Fjern notat"
+    },
+  
+    "en":  {
+      "id": 2,
+      "title": "Note-IFY",
+      "placeHold": "Write a note..",
+      "addNote": "Add Note",
+      "removeNote": "Remove Note"
+    }
+  }
+  
