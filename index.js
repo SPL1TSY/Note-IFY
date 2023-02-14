@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express';
 const app = express();
 const port = 8080;
 
@@ -13,3 +13,8 @@ app.get ('/', async (request, response) => {
   response.send ('Hello world');
 });
 
+/*
+app.get('/', (req, res) => {
+  res.send('The server on notes app is working! Continue watching this tut, about 5mins in: https://www.youtube.com/watch?v=wYALykLb5oY :)
+  Also remember to test server out by "npm run dev" in package.json' -> "npm install -g nodemon" to install nodemon on mac)
+})*/
