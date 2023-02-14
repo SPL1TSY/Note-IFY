@@ -12,3 +12,4 @@ app.use(express.static('public'));
 app.listen(port, () => {
   console.log(`Notes app listening on port http://localhost:${port}`)
 }); 
+
