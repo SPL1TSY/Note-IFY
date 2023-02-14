@@ -8,7 +8,8 @@ app.listen(port, () => {
   console.log(`Notes app listening on port http://localhost:${port}`)
 }); 
 
-app.get ('/notes', async (request, response) => {
+app.get ('/', async (request, response) => {
   //run code stuff
+  response.send ('Hello world');
 });
 
