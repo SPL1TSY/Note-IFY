@@ -1,8 +1,12 @@
 import express from 'express';
+import bodyParser from 'body-parser';
+
 const app = express();
 const port = 8080;
 
 app.use(express.static('public'));
+
+app.use(bodyParser.json());
 
 app.listen(port, () => {
   console.log(`Notes app listening on port http://localhost:${port}`)
@@ -10,7 +14,7 @@ app.listen(port, () => {
 
 app.get ('/', async (request, response) => {
   //run code in here and stuff
-  response.send ('Hello world');
+  response.send ('Server is running');
 });
 
 /*
