@@ -4,36 +4,5 @@ html{
 }
 body{
     margin: 0;
-    padding: 0;
-    
-}input[type="text"] {
-    padding: 10px;
-    font-size: 16px;
-    width: 70%;
-    margin-bottom: 20px;
-}
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: lightblue;
-    border: none;
-    cursor: pointer;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    background-color: lightgray;
-    padding: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.remove-button {
-    background-color: red;
-    color: white;
+    padding: 0; 
 }
