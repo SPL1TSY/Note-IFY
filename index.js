@@ -26,5 +26,10 @@ app.get ('/', async (req, res) => {
 
   npm install express ejs body-parser
 
+  git reset --hard 
+  git pull
+
+  ^ Those commands for when you have made local changes, but want to ignore them and overwrite them from the repo
+
   Also remember to test server out by "npm run dev" in package.json' (install nodemon for refresh of server for every change via -> "npm install -g nodemon" nodemon on mac)
 */
