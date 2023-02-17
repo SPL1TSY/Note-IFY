@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes Application</title>
-    <link rel="stylesheet" href ="style.css">
+    <title>Note-IFY</title>
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-    <h1>Notes Application</h1>
-    <script src = "script.js"></script>
+    <nav>
+        <h1>Note-IFY</h1>
+        <div id="language-selector">
+            <label for="language-select" data-lang="language_label">Language:</label>
+            <select id="language-select">
+              <option value="en" selected>English</option>
+              <option value="no">Norwegian</option>
+            </select>
+        </div>
+    </nav>
 
+    <form id="new-note-form">
+        <label for="note-content" data-lang="new-note-label">New note:</label>
+        <input type="text" id="note-content" name="note-content">
+        <button type="submit" data-lang="add-note-button">Add note</button>
+    </form>
+
+    <ul id="note-list" data-lang="notes-list"></ul>
+
+    <script src="./js/notes.js"></script>
+    <script src="./js/translate.js"></script>
+
+    <!-- Notes App developed & designed by Harun Hurtic -->
 </body>
 </html>

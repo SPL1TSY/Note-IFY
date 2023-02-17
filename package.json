@@ -1,11 +1,11 @@
 {
   "name": "note-ify",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "This is a Notes App for taking notes",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
