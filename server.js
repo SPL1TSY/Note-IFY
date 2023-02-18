@@ -37,6 +37,26 @@ app.listen(port, () => {
   console.log(`Notes app listening on port http://localhost:${port}`);
 });
 
+// PUT endpoint to update a note on the server when the user changes a note
+app.put('/notes/:id', (req, res) => {
+  const id = req.params.id;
+  const updatedNote = req.body.note;
+
+  if (!updatedNote) {
+    res.status(400).send('Note content is missing');
+    return;
+  }
+
+  if (id >= notes.length) {
+    res.status(404).send('Note not found');
+    return;
+  }
+
+  notes[id] = updatedNote;
+  fs.writeFileSync('./json/notes.json', JSON.stringify(notes));
+  res.send('Note updated');
+});
+
 /*
   Notes to myself:
   See how other people have created similar apps: 
