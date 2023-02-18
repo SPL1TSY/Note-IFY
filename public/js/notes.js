@@ -13,7 +13,7 @@ function createNoteElement(note, id) {
   const buttonContainer = document.createElement('div');
 
   const editButton = document.createElement('button');
-  editButton.textContent = 'Edit';
+  editButton.textContent = 'Edit'; //editButton.setAttribute('data-lang', 'edit-button'); Find a way to implement this one without bugs..
   editButton.addEventListener('click', () => {
     editNoteElement(li);
   });
@@ -49,7 +49,14 @@ function addNote() {
       })
       .catch(err => console.error(err));
   } else {
-    noteList.innerHTML += '<p class="errorMsg">You have to write a note before you can add it..</p>';
+    const errorMsg = document.querySelector('.errorMsg');
+if (errorMsg) {
+  errorMsg.remove();
+}
+const errorContainer = document.createElement('div');
+errorContainer.classList.add('errorMsg');
+errorContainer.textContent = 'You have to write a note before you can add it.';
+noteList.appendChild(errorContainer);
   }
 }
 
@@ -66,34 +73,6 @@ function deleteNoteElement(noteElement) {
     .catch(err => console.error(err));
 }
 
-/*function addEditAndDeleteButtons(noteElement, id) {
-  // Add an 'Edit' button to edit the note
-  const editButton = document.createElement('button');
-  editButton.textContent = 'Edit';
-  editButton.addEventListener('click', () => {
-    editNoteElement(noteElement);
-  });
-
-  // Add a 'Delete' button to delete the note
-  const deleteButton = document.createElement('button');
-  deleteButton.textContent = 'Delete';
-  deleteButton.addEventListener('click', () => {
-    fetch(`/notes/${id}`, {
-      method: 'DELETE'
-    })
-      .then(res => res.text())
-      .then(() => {
-        // Remove the note element from the DOM
-        noteElement.remove();
-      })
-      .catch(err => console.error(err));
-  });
-
-  // Append the buttons to the note element
-  noteElement.appendChild(editButton);
-  noteElement.appendChild(deleteButton);
-}*/
-
 function editNoteElement(noteElement) {
   const id = noteElement.getAttribute('data-id');
   const noteText = noteElement.textContent.replace("EditDelete", "");
@@ -106,6 +85,8 @@ function editNoteElement(noteElement) {
   // Replace the text with the input field
   noteElement.textContent = '';
   noteElement.appendChild(input);
+
+  const buttonContainer = document.createElement('div');
 
   // Add a 'Save' button to save the edited note
   const saveButton = document.createElement('button');
@@ -125,7 +106,20 @@ function editNoteElement(noteElement) {
       .then(res => res.text())
       .then(() => {
         // Add back the 'Edit' and 'Delete' buttons
-        //addEditAndDeleteButtons(noteElement, id);
+        const buttonContainer = document.createElement('div');
+        const editButton = document.createElement('button');
+        editButton.textContent = 'Edit';
+        editButton.addEventListener('click', () => {
+          editNoteElement(noteElement);
+        });
+        buttonContainer.appendChild(editButton);
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.addEventListener('click', () => {
+          deleteNoteElement(noteElement);
+        });
+        buttonContainer.appendChild(deleteButton);
+        noteElement.appendChild(buttonContainer);
       })
       .catch(err => console.error(err));
   });
@@ -133,12 +127,40 @@ function editNoteElement(noteElement) {
   // Add a 'Cancel' button to cancel the edit
   const cancelButton = document.createElement('button');
   cancelButton.textContent = 'Cancel';
+
   cancelButton.addEventListener('click', () => {
-    // Update the note element with the original note text
-    noteElement.textContent = noteText;
-    // Add back the 'Edit' and 'Delete' buttons
-    //addEditAndDeleteButtons(noteElement, id);
+  // Update the note element with the original note text
+  noteElement.textContent = noteText;
+  // Add back the 'Edit' and 'Delete' buttons
+  const buttonContainer = document.createElement('div');
+  const editButton = document.createElement('button');
+  editButton.textContent = 'Edit';
+  editButton.addEventListener('click', () => {
+    editNoteElement(noteElement);
   });
+  buttonContainer.appendChild(editButton);
+  const deleteButton = document.createElement('button');
+  deleteButton.textContent = 'Delete';
+  deleteButton.addEventListener('click', () => {
+    deleteNoteElement(noteElement);
+  });
+  buttonContainer.appendChild(deleteButton);
+  noteElement.appendChild(buttonContainer);
+});
+
+  const editButton = document.createElement('button');
+  editButton.textContent = 'Edit';
+  editButton.addEventListener('click', () => {
+    editNoteElement(noteElement);
+  });
+  buttonContainer.appendChild(editButton);
+
+  const deleteButton = document.createElement('button');
+  deleteButton.textContent = 'Delete';
+  deleteButton.addEventListener('click', () => {
+    deleteNoteElement(noteElement);
+  });
+  buttonContainer.appendChild(deleteButton);
 
   // Remove the 'Edit' and 'Delete' buttons
   noteElement.querySelectorAll('button').forEach(button => button.remove());
