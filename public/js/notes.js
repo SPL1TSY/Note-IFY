@@ -49,7 +49,7 @@ function addNote() {
       })
       .catch(err => console.error(err));
   } else {
-    noteList.innerHTML = '<p class="errorMsg">You have to write a note before you can add it..</p>';
+    noteList.innerHTML += '<p class="errorMsg">You have to write a note before you can add it..</p>';
   }
 }
 
