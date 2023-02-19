@@ -28,6 +28,7 @@ nav h1 {
 /* Style for the language selector in the navigation bar */
 #language-selector {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin: 10px 0;
@@ -35,6 +36,7 @@ nav h1 {
 }
 
 #language-selector label {
+  flex-wrap: wrap;
   font-weight: bold;
   margin-right: 10px;
   font-size: 16px;
@@ -42,6 +44,7 @@ nav h1 {
 }
 
 #language-selector select {
+  flex-wrap: wrap;
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
