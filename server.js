@@ -1,5 +1,4 @@
 import express from 'express';
-import bodyParser from 'body-parser';
 import fs from 'fs';
 
 const app = express();
@@ -9,7 +8,7 @@ const port = process.env.PORT || 8080;
 let notes = fs.existsSync('./json/notes.json') ? JSON.parse(fs.readFileSync('./json/notes.json')) : [];
 
 app.use(express.static('public'));
-app.use(bodyParser.json());
+app.use(express.json()); //Tells the program that we're using .JSON files to transport info to body
 app.use('.../public/translations', express.static('translations'));
 
 // GET endpoint to retrieve all notes
@@ -64,7 +63,7 @@ app.put('/notes/:id', (req, res) => {
   https://github.com/viakeegan/notes-are-kee/blob/main/server.js
   https://blog.devgenius.io/learning-nodejs-by-creating-a-notes-app-9eafc4223306
 
-  npm install express ejs body-parser
+  npm install express ejs body-parser -> Don't need bodyparser anymore apparently from express 16+, you can use "app.use(express.json());" that line instead.
 
   git reset --hard 
   git pull
