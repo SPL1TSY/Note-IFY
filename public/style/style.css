@@ -5,80 +5,80 @@ body {
   padding: 0;
   background-color: #f6f6f6;
   color: #333;
-  }
-  
-  /* Style for the navigation bar */
-  nav {
+}
+
+/* Style for the navigation bar */
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #333;
   color: #fff;
   padding: 10px;
-  }
-  
-  /* Style for the navigation bar heading */
-  nav h1 {
+}
+
+/* Style for the navigation bar heading */
+nav h1 {
   margin: 0;
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 1px;
-  }
-  
-  /* Style for the language selector in the navigation bar */
-  #language-selector {
+}
+
+/* Style for the language selector in the navigation bar */
+#language-selector {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 0;
   height: 100%;
-  }
-  
-  #language-selector label {
+}
+
+#language-selector label {
   font-weight: bold;
   margin-right: 10px;
   font-size: 16px;
   color: #fff;
-  }
-  
-  #language-selector select {
+}
+
+#language-selector select {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
   border: none;
   background-color: #555;
   color: #fff;
-  }
-  
-  /* Style for the new note form */
-  #new-note-form {
+}
+
+/* Style for the new note form */
+#new-note-form {
   margin: 20px auto;
   width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  }
-  
-  /* Style for the note content label */
-  label {
+}
+
+/* Style for the note content label */
+label {
   font-weight: bold;
   margin-right: 10px;
   font-size: 20px;
   color: #333;
-  }
-  
-  /* Style for the note content input */
-  input[type="text"] {
+}
+
+/* Style for the note content input */
+input[type="text"] {
   flex-grow: 1;
   padding: 10px;
   border: 2px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
-  }
-  
-  /* Style for the add note button */
-  button[type="submit"] {
+}
+
+/* Style for the add note button */
+button[type="submit"] {
   background-color: #0088cc;
   color: #fff;
   border: none;
@@ -88,31 +88,32 @@ body {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  }
-  
-  button[type="submit"]:hover {
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
   background-color: #006699;
-  }
-  
-  /* Style for the note list */
-  #note-list {
+}
+
+/* Style for the note list */
+#note-list {
   list-style-type: none;
   margin: 20px auto;
   padding: 0;
   width: 80%;
-  }
-  
-  /* Style for the individual note items */
-  .note-item {
+}
+
+/* Style for the individual note items */
+.note-item {
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 4px;
   font-size: 20px;
-  }
-  
-  li {
+}
+
+li {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -122,9 +123,9 @@ body {
   border-radius: 5px;
   font-size: 16px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  li button {
+}
+
+li button {
   background-color: #ff5a5f;
   color: #fff;
   border: none;
@@ -132,13 +133,14 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  }
-  li button:hover {
-    background-color: #006699;
-    }
-  
-  .errorMsg {
+}
+
+li button:hover {
+  background-color: #006699;
+}
+
+.errorMsg {
   color: red;
   font-size: 16px;
   font-weight: bold;
-  }
+}
