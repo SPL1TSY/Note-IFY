@@ -96,7 +96,10 @@ nav h1 {
   letter-spacing: 1px;
   text-decoration: none;
 }
-.nav-link:hover, #noteIFY:hover{
+.nav-link:hover{
+  color: #0088cc;
+}
+#noteIFY:hover{
   color: #0088cc;
   animation: 2s anim-flipX ease infinite;
 }
