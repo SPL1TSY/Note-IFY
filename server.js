@@ -11,6 +11,7 @@ app.use(express.static('public'));
 app.use(express.json()); //Tells the program that we're using .JSON files to transport info to body
 app.use('.../public/translations', express.static('translations'));
 
+
 // GET endpoint to retrieve all notes
 app.get('/notes', (req, res) => {
   res.send(notes);
@@ -62,6 +63,9 @@ app.put('/notes/:id', (req, res) => {
   This one was specifically used for making a notes app: https://www.geeksforgeeks.org/how-to-build-note-taking-application-using-node-js/ 
   https://github.com/viakeegan/notes-are-kee/blob/main/server.js
   https://blog.devgenius.io/learning-nodejs-by-creating-a-notes-app-9eafc4223306
+
+  This guy helps a lot when it comes to SPA: -> Watch him when creating login stuff
+  https://www.youtube.com/watch?v=wlVmmsMD28w
 
   npm install express ejs body-parser -> Don't need bodyparser anymore apparently from express 16+, you can use "app.use(express.json());" that line instead.
 

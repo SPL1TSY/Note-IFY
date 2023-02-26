@@ -1,6 +1,6 @@
 {
   "name": "note-ify",
-  "version": "4.0.0",
+  "version": "4.5.0",
   "description": "This is a Notes App for taking notes",
   "main": "server.js",
   "type": "module",

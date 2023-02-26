@@ -7,6 +7,18 @@ body {
   color: #333;
 }
 
+/********* Router & Nav-bar *********/
+.page{
+  display:none;
+  margin: 20px auto;
+  padding: 0;
+  width: 80%;
+  justify-content: center;
+  text-align: center;
+}
+.active{
+  display: block;
+}
 /* Style for the navigation bar */
 nav {
   display: flex;
@@ -16,10 +28,27 @@ nav {
   color: #fff;
   padding: 10px;
 }
+@media only screen and (max-width: 767px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 20px;
+  }
+  .nav-link {
+    margin: 10px 0;
+  }
+  #language-selector {
+    justify-content: right;
+  }
+  #language-selector label {
+    margin-right: 5px;
+  }
+}
 
 /* Style for the navigation bar heading */
 nav h1 {
-  margin: 0;
+  margin: 10px;
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -52,6 +81,44 @@ nav h1 {
   background-color: #555;
   color: #fff;
 }
+.nav-link{
+  margin: 0;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+#noteIFY{
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.nav-link:hover, #noteIFY:hover{
+  color: #0088cc;
+  animation: 2s anim-flipX ease infinite;
+}
+/* CSS Animation keyframes for text */
+@keyframes anim-flipX {
+  0% {
+    opacity: 0;
+    transform: rotateX(90def);
+  }
+  50% {
+    opacity: 1;
+    transform: rotateX(720deg);
+  }
+  100% {
+    /* animate nothing to pause animation at the end */
+    opacity: 1;
+    transform: rotateX(720deg);
+  }
+}
+
+
+/********* END of Router *********/
 
 /* Style for the new note form */
 #new-note-form {

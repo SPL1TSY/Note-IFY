@@ -10,8 +10,13 @@
 </head>
 
 <body>
+    <!-- Nav bar -->
     <nav>
-        <h1>Note-IFY</h1>
+        <a id ="noteIFY" href = "#notes"><h1>NOTE-IFY</h1></a>
+        <a href = "#" data-target="notes" data-lang="notes_label" class="nav-link">Notes</a>
+        <a href = "#" data-target="login" data-lang="login_label" class="nav-link">Log In</a>
+        <a href = "#" data-target="favourites" data-lang="favourites_label" class="nav-link">Favourites</a>
+
         <div id="language-selector">
             <label for="language-select" data-lang="language_label">Language:</label>
             <select id="language-select">
@@ -20,7 +25,10 @@
             </select>
         </div>
     </nav>
-
+    
+    <!-- Notes div -->
+    <div class ="page active" id="notes">
+    <h1 data-lang="notes_label">Notes</h1>
     <form id="new-note-form">
         <label for="note-content" data-lang="new-note-label">New note:</label>
         <input type="text" placeholder="NOTE-IFY.." id="note-content" name="note-content">
@@ -28,7 +36,23 @@
     </form>
 
     <ul id="note-list" data-lang="notes-list"></ul>
+</div>
 
+<!-- Login div -->
+<div class ="page" id="login">
+<h1 data-lang="login_label">Log In</h1>
+<h1>--COMING SOON--</h1>
+
+</div>
+
+<!-- Favourites div -->
+<div class ="page" id="favourites">
+    <h1 data-lang="favourites_label">Favourites</h1>
+    <h1>--COMING SOON--</h1>
+    
+    </div>
+
+   <script src="./js/router.js"></script> 
     <script src="./js/notes.js"></script>
     <script src="./js/translate.js"></script>
 

@@ -1,1 +1,1 @@
-["Dette er et Notat, der innholdet blir lagret i en separat .json fil. Dette vil da si at notatet blir lagret uavhengig om serveren er oppe eller ikke. Serveren bare henter innholdet fra filen :)"]
+["This is a Note, the content of which is saved in a separate .json file. This means that the note is saved regardless of whether the server is up or not. The server just retrieves the content from the file :)"]
