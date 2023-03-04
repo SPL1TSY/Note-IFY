@@ -9,13 +9,29 @@ let notes = fs.existsSync('./json/notes.json') ? JSON.parse(fs.readFileSync('./j
 
 app.use(express.static('public'));
 app.use(express.json()); //Tells the program that we're using .JSON files to transport info to body
-app.use('.../public/translations', express.static('translations'));
 
+app.use('.../public/translations', express.static('translations'));
 
 // GET endpoint to retrieve all notes
 app.get('/notes', (req, res) => {
   res.send(notes);
+
 });
+
+// GET endpoint to retrieve favourites
+/*app.get('/favourites', (req, res) => {
+  
+});
+
+// GET endpoint to retrieve login
+app.get('/login', (req, res) => {
+  
+});*/
+
+app.post('/register', async (req, res) => {
+  let userMatch = users.find((user) => req.body.email === user.email);
+})
+
 
 // POST endpoint to add a note
 app.post('/notes', (req, res) => {
